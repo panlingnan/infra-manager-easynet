@@ -1,14 +1,16 @@
 terraform {
   required_providers {
     volcenginecc = {
-      source  = "volcengine/volcenginecc"
-      version = "~> 0.0.49"
-      endpoints = {
-        cloudcontrolapi = "volcengineapi-boe-stable.byted.org"
-      }
-      region = "cn-guilin-boe"
+      source = "volcengine/volcenginecc"
     }
   }
+}
+
+provider "volcenginecc" {
+  endpoints={
+    cloudcontrolapi = "volcengineapi-boe-stable.byted.org"
+  }
+  region = "cn-guilin-boe"
 }
 
 variable "user_name" {
