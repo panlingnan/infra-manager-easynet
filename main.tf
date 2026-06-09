@@ -16,7 +16,7 @@ provider "volcenginecc" {
 variable "cloudcontrolapi_endpoint" {
   type        = string
   description = "Volcengine Cloud Control API 域名"
-  default     = "volcengineapi-boe-stable.byted.org"
+  default     = "open.stable.volcengineapi-test.com"
 }
 
 variable "region" {
@@ -25,36 +25,34 @@ variable "region" {
   default     = "cn-guilin-boe"
 }
 
-variable "user_name" {
+variable "vpc_id" {
   type        = string
-  description = "IAM 用户名称"
-  default     = "UserDemo"
+  description = "子网所属 VPC ID"
+  default     = "vpc-2d65j3301rg1s58ozfer0ix1b"
+}
+
+variable "zone_id" {
+  type        = string
+  description = "子网所在可用区"
+  default     = "cn-guilin-a"
+}
+
+variable "subnet_name" {
+  type        = string
+  description = "子网名称"
+  default     = "subnet2323232"
 }
 
 variable "description" {
   type        = string
-  description = "IAM 用户描述"
-  default     = "user description"
+  description = "子网描述"
+  default     = "subnet2232323 description"
 }
 
-variable "groups" {
-  type        = list(string)
-  description = "IAM 用户所属用户组"
-  default     = ["UserGroupDemo"]
-}
-
-variable "policies" {
-  type = list(object({
-    policy_name = string
-    policy_type = string
-  }))
-  description = "IAM 用户绑定的策略列表"
-  default = [
-    {
-      policy_name = "TOSReadOnlyAccess"
-      policy_type = "System"
-    }
-  ]
+variable "cidr_block" {
+  type        = string
+  description = "子网 CIDR 段"
+  default     = "192.168.0.0/2"
 }
 
 variable "tags" {
@@ -62,7 +60,7 @@ variable "tags" {
     key   = string
     value = string
   }))
-  description = "IAM 用户标签"
+  description = "子网标签"
   default = [
     {
       key   = "env"
@@ -71,10 +69,11 @@ variable "tags" {
   ]
 }
 
-resource "volcenginecc_iam_user" "UserDemo" {
-  user_name   = var.user_name
+resource "volcenginecc_vpc_subnet" "SubnetDemo" {
+  vpc_id      = var.vpc_id
+  zone_id     = var.zone_id
+  subnet_name = var.subnet_name
   description = var.description
-  groups      = var.groups
-  policies    = var.policies
+  cidr_block  = var.cidr_block
   tags        = var.tags
 }
