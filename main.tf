@@ -3,7 +3,9 @@ terraform {
     volcenginecc = {
       source  = "volcengine/volcenginecc"
       version = "~> 0.0.49"
-      endpoint = "open.stable.volcengineapi-test.com"
+      endpoints = {
+        cloudcontrolapi = "volcengineapi-boe-stable.byted.org"
+      }
       region = "cn-guilin-boe"
     }
   }
