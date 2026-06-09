@@ -3,6 +3,8 @@ terraform {
     volcenginecc = {
       source  = "volcengine/volcenginecc"
       version = "~> 0.0.49"
+      endpoint = "open.stable.volcengineapi-test.com"
+      region = "cn-guilin-boe"
     }
   }
 }
