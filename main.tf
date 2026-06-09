@@ -7,10 +7,22 @@ terraform {
 }
 
 provider "volcenginecc" {
-  endpoints={
-    cloudcontrolapi = "volcengineapi-boe-stable.byted.org"
+  endpoints = {
+    cloudcontrolapi = var.cloudcontrolapi_endpoint
   }
-  region = "cn-guilin-boe"
+  region = var.region
+}
+
+variable "cloudcontrolapi_endpoint" {
+  type        = string
+  description = "Volcengine Cloud Control API 域名"
+  default     = "volcengineapi-boe-stable.byted.org"
+}
+
+variable "region" {
+  type        = string
+  description = "Volcengine 区域"
+  default     = "cn-guilin-boe"
 }
 
 variable "user_name" {
