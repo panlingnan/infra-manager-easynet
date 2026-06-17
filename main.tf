@@ -43,7 +43,7 @@ variable "subnet_name" {
 }
 
 variable "subnet_description" {
-  description = "Description of the subnet"
+  description = "Description of the subnet update"
   type        = string
   default     = "Subnet created by Terraform"
 }
