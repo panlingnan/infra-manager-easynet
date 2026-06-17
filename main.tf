@@ -39,7 +39,7 @@ variable "vpc_cidr_block" {
 variable "subnet_name" {
   description = "Name of the subnet"
   type        = string
-  default     = "subnet-demo"
+  default     = "subnet-demo-12"
 }
 
 variable "subnet_description" {
