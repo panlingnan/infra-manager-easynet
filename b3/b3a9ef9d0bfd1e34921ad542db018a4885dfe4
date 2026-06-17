@@ -1,0 +1,21 @@
+main.tf
+  s_5cc1c57f45a3f5::t_85633ac87c9964 42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "b3b3a9ef9d0bfd1e34921ad542db018a4885dfe4",
+  "prompts": {},
+  "sessions": {
+    "s_5cc1c57f45a3f5": {
+      "agent_id": {
+        "tool": "trae-cue",
+        "id": "ai_tab-icr-d0c67f39-c0b4-4ee6-a42a-44202d8b96a3",
+        "model": "default"
+      },
+      "human_author": "panlingnan <panlingnan@bytedance.com>"
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
