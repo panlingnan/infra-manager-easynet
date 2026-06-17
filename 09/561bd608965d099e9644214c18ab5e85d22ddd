@@ -1,0 +1,16 @@
+main.tf
+  h_8f8ed475454a1f 42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "09561bd608965d099e9644214c18ab5e85d22ddd",
+  "prompts": {},
+  "humans": {
+    "h_8f8ed475454a1f": {
+      "author": "panlingnan <panlingnan@bytedance.com>"
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
