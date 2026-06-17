@@ -21,7 +21,7 @@ variable "cloudcontrolapi_endpoint" {
 variable "vpc_name" {
   description = "Name of the VPC"
   type        = string
-  default     = "vpc-demo"
+  default     = "vpc-demo-update"
 }
 
 variable "vpc_description" {
