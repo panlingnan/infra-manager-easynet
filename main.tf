@@ -115,6 +115,11 @@ output "vpc_cidr_block" {
   value       = volcenginecc_vpc_vpc.vpc-demo.cidr_block
 }
 
+output "vpc_description" {
+  description = "Description of the created VPC"
+  value       = volcenginecc_vpc_vpc.vpc-demo.description
+}
+
 output "vpc_status" {
   description = "Status of the created VPC"
   value       = volcenginecc_vpc_vpc.vpc-demo.status
@@ -138,6 +143,11 @@ output "subnet_name" {
 output "subnet_cidr_block" {
   description = "CIDR block of the created subnet"
   value       = volcenginecc_vpc_subnet.subnet-demo.cidr_block
+}
+
+output "subnet_description" {
+  description = "Description of the created subnet"
+  value       = volcenginecc_vpc_subnet.subnet-demo.description
 }
 
 output "subnet_zone_id" {
